@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-img: #E1E1E6;
+    --content-img: #323238;
+    --txt-timer: #323238;
+    --bg-card-hover: #02799D;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container {
+    animation: top 800ms;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+#timer {
+    display: flex;
+    justify-content: center;
+    color: var(--txt-timer);
+    font-size: 12.6rem;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    gap: 4.0rem;
+    margin-bottom: 6rem;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.buttons path {
+    fill: var(--content-img)
+}
+
+.box-two {
+    position: relative;
+    width: 30.8rem;
+    height: 33.6rem;
+    margin: auto;
+}
+
+.box-card .forest,
+.rain,
+.fire-place,
+.coffe-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box-card div {
+    width: 13.8rem;
+    height: 15.2rem;
+    border-radius: 2.4rem;
+    background-color: var(--bg-img);
+    margin: auto;
+    transition-duration: 300ms;
+}
+
+.box-card {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-areas: "A B""C D";
+    cursor: pointer;
+}
+
+
+.svg-color path {
+    fill: var(--content-img);
+
+}
+
+.box-card .card-color {
+    background-color: var(--bg-card-hover);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.box-card div:hover {
+    transform: scale(1.1);
+}
+
+@keyframes top {
+    0% {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@media(min-width:900px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 192px;
+        width: 821px;
+        height: 336px;
+        margin: auto;
+        min-height: 100vh;
+
+        animation: X 800ms;
+    }
+
+    @keyframes X {
+        0% {
+            transform: translateX(-15px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+
+}
